@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Get the version of xz
 version=$(xz --version 2>&1 | head -n 1 | awk '{print $NF}')
 
@@ -9,3 +8,5 @@ if [[ "$version" == "5.6.0" || "$version" == "5.6.1" ]]; then
 else
   echo "Your xz version is not affected"
 fi
+
+# For further information: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-3094
